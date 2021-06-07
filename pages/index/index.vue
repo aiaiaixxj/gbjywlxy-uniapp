@@ -50,7 +50,8 @@
 		},
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				mseeage:''
 			}
 		},
 		onLoad() {
