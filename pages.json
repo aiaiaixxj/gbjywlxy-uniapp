@@ -26,7 +26,15 @@
 			}
 		}
 
-	],
+	    ,{
+            "path" : "pages/Announcements/text/text",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationBarTitleText": "水平排列，左图右文"
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
