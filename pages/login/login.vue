@@ -8,7 +8,7 @@
 				<el-input class="el-input" type="text" clearable focus v-model="username" @change="GetUserAccountInfo"
 					maxlength="18" placeholder="请输入账号">
 				</el-input>
-			</view> 
+			</view>
 			<view class="input-row border">
 				<!-- <text class="title">密码：</text> -->
 				<el-input type="password" displayable v-model="password" @change="GetUserSecretInfo"
@@ -39,6 +39,7 @@
 		Toast
 	} from 'mint-ui';
 	export default {
+		name: "login",
 		data() {
 			return {
 				loginBtnLoading: false,
@@ -101,11 +102,19 @@
 					})
 					.then(function(res) {
 						console.log(res);
+						uni.setStorageSync("userInfo", res);
 						if (res.status == 1) {
-
 							uni.redirectTo({
-								url: '../index/index',
+								url: '../../pages/index/index',
+								success: res => {
+									console.log("res=>", res)
+								},
+								fail: (Error) => {
+									console.log("Error=>", Error)
+								},
+								complete: () => {}
 							})
+							
 						} else if (res.status == -1) {
 							console.log('用户被禁用！')
 							Toast({

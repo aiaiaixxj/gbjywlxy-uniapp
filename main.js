@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App'
 import axios from './utils/request/request.js'
+import router from './utils/router/index.js'
 
 // import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
-
+// import VueRouter from 'vue-router'
 import {
 	Button,
 	Select,
@@ -18,6 +19,7 @@ import 'mint-ui/lib/style.css'
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 App.mpType = 'app'
+
 Vue.use(Button)
 Vue.use(Select)
 Vue.use(Row)
@@ -28,7 +30,11 @@ Vue.use(MintUI)
 
 //Vue.use(ElementUI);
 const app = new Vue({
+	//router
+	router,
 	...App
+	
+
 })
 app.$mount()
 console.log("app=>", app)

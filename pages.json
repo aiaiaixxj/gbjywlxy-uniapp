@@ -12,7 +12,17 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "武汉干部教育网络学院"
+				"navigationBarTitleText": "武汉干部教育网络学院",
+				"navigationBarBackgroundColor":"red",
+				"navigationBarTextStyle":"white"
+			}
+		},
+		{
+			"path": "pages/Announcements/announcements",
+			"style": {
+				"navigationBarTitleText": "通知公告",
+				"navigationBarBackgroundColor":"red",
+				"navigationBarTextStyle":"white"
 			}
 		}
 
